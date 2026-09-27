@@ -20,7 +20,6 @@ int main () {
     //Demande de saisie de par l'utilisateur
     cout<<"Quel est votre numéro de compte ?"<<endl;
     cin>>numero_compte;
-
     string nom_famille;
     cout<<"Quel est votre nom de famille ?"<<endl;
     cin>>nom_famille;
@@ -32,12 +31,14 @@ int main () {
 
     //Demande de saisie du montant souhaité en euro à l'utilisateur
     cout <<"Entrez la somme souhaitée en Euro : "<<endl;
+
     //Initilialisation des frais retirés en euro
     double somme_retiree_euro =0;
     cin >>somme_retiree_euro;
     double somme_retiree_franc= somme_retiree_euro/taux_change;
     solde_compte -= somme_retiree_franc+frais_operation;
     cout<< "Somme CHF : "<< somme_retiree_franc<<", Solde compte : " <<solde_compte << endl;
+
     //Définition des variables du ticket
     string cadre = "+-------------------------------+";
     char seprateur_colonne = '|';
@@ -46,6 +47,7 @@ int main () {
     string ligne_somme_chf  ="Somme CHF              : ";
     string ligne_frais = "Frais                  : ";
     string ligne_solde_compte = "Solde Compte           : ";
+
     //Affichage du ticket
     cout<<cadre<<endl;
     cout<<seprateur_colonne<<endl;
