@@ -38,22 +38,29 @@ int main () {
     double somme_retiree_franc= somme_retiree_euro/taux_change;
     solde_compte -= somme_retiree_franc+frais_operation;
     cout<< "Somme CHF : "<< somme_retiree_franc<<", Solde compte : " <<solde_compte << endl;
-
+    //Définition des variables du ticket
+    string cadre = "+-------------------------------+";
+    char seprateur_colonne = '|';
+    string ligne_somme_euro = "Somme Euro             : ";
+    string ligne_taux_change = "1 CHF en Euro          : ";
+    string ligne_somme_chf  ="Somme CHF              : ";
+    string ligne_frais = "Frais                  : ";
+    string ligne_solde_compte = "Solde Compte           : ";
     //Affichage du ticket
-    cout<<"+-------------------------------+"<<endl;
-    cout<<"|"<<endl;
-    cout<<"| "<< nom_famille<<endl;
-    cout<<"| "<<numero_compte<<endl;
-    cout<<"|"<<endl;
-    cout<<"| Somme Euro             : "<<somme_retiree_euro<<endl;
-    cout<<"| 1 CHF en Euro          : "<<taux_change<<endl;
-    cout<<"|"<<endl;
-    cout<<"| Somme CHF              : "<<somme_retiree_franc<<endl;
-    cout<<"| Frais                  : "<< frais_operation<<endl;
-    cout<<"|"<<endl;
-    cout<<"| Solde Compte           : "<<solde_compte<<endl;
-    cout<<"|"<<endl;
-    cout<<"+-------------------------------+"<<endl;
+    cout<<cadre<<endl;
+    cout<<seprateur_colonne<<endl;
+    cout<<seprateur_colonne<< nom_famille<<endl;
+    cout<<seprateur_colonne<<numero_compte<<endl;
+    cout<<seprateur_colonne<<endl;
+    cout<<seprateur_colonne<<" "<<ligne_somme_euro<<somme_retiree_euro<<endl;
+    cout<<seprateur_colonne<<" "<<ligne_taux_change<<taux_change<<endl;
+    cout<<seprateur_colonne<<endl;
+    cout<<seprateur_colonne<<" "<<ligne_somme_chf<<somme_retiree_franc<<endl;
+    cout<<seprateur_colonne<<" "<<ligne_frais<< frais_operation<<endl;
+    cout<<seprateur_colonne<<endl;
+    cout<<seprateur_colonne<<" "<<ligne_solde_compte<<solde_compte<<endl;
+    cout<<seprateur_colonne<<endl;
+    cout<<cadre<<endl;
 
 return EXIT_SUCCESS;
 }
