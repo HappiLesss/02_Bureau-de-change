@@ -37,12 +37,12 @@ int main () {
     float somme_retiree_euro =0.f;
     std::cin>>somme_retiree_euro;
     //On multiplie la valeur saisie par l'utilisateur par 100 pour récupérer les deux chiffres après la virgule et on arrondit au int supérieur
-    double somme_retiree_franc= round((somme_retiree_euro/taux_change)*100);
+    float somme_retiree_franc= round((somme_retiree_euro/taux_change)*100);
     //On redivise notre résultat par 100 pour récupérer les deux chiffres après la virgule
     somme_retiree_franc /=100;
     solde_compte -= somme_retiree_franc+frais_operation;
     std::cout<<std::fixed<<setprecision(2);
-    std::cout<< "Somme CHF : "<<somme_retiree_franc<<", Solde compte : " <<solde_compte << endl;
+    std::cout<< "Somme CHF : "<<somme_retiree_franc<<", Solde compte : " <<solde_compte << std::endl;
 
     //Définition des variables du ticket
     string cadre = "+-------------------------------+";
