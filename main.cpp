@@ -64,9 +64,9 @@ int main () {
     std::cout<<setprecision(3)<<separateur_ligne<<" "<<ligne_taux_change<<separateur_colonne<<" "<<taux_change<<std::endl;
     std::cout<<separateur_ligne<<std::endl;
     std::cout<<setprecision(2)<<separateur_ligne<<" "<<ligne_somme_chf<<separateur_colonne<<" "<<somme_retiree_franc<<std::endl;
-    std::cout<<separateur_ligne<<" "<<ligne_frais<<separateur_colonne<<" "<<frais_operation<<std::endl;
+    std::cout<<setprecision(0)<<separateur_ligne<<" "<<ligne_frais<<separateur_colonne<<" "<<frais_operation<<std::endl;
     std::cout<<separateur_ligne<<std::endl;
-    std::cout<<separateur_ligne<<" "<<ligne_solde_compte<<separateur_colonne<<" "<<solde_compte<<std::endl;
+    std::cout<<setprecision(2)<<separateur_ligne<<" "<<ligne_solde_compte<<separateur_colonne<<" "<<solde_compte<<std::endl;
     std::cout<<separateur_ligne<<std::endl;
     std::cout<<cadre<<std::endl;
 
